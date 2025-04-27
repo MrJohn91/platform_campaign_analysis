@@ -1,87 +1,79 @@
 # Media Analytics Pipeline
 
+![Pipeline Diagram](https://github.com/MrJohn91/platform_campaign_analysis/blob/main/visualization/diagram.png)
+
 ## Overview
+
+This project analyzes a year of social media campaign data from four sources across devices. The goal is to visualize trends, compare device performance, and share key insights on Meta’s weekly campaigns and their duration to guide smarter decisions.
 
 This project implements a media analytics pipeline for analyzing campaign performance data from various platforms. The pipeline generates several visual reports, providing insights into metrics such as impressions, clicks, and views across different device types and platforms. The reports are accessible via a FastAPI-based web service and are generated using Docker.
 
-The pipeline includes:
-1. Data aggregation and analysis of campaign performance data from multiple platforms.
-2. Weekly impressions reporting with normalization for partial weeks.
-3. Various visualizations and summary reports.
+## Features
 
-## Requirements
-
-- Docker (to run the pipeline in a containerized environment)
-- FastAPI (for the web service API)
-- Uvicorn (for serving the FastAPI application)
-- Pandas and other relevant libraries for data processing
-- Media Analytics Pipeline logic (custom code)
+- **Campaign Performance Analysis:** Analyze data from four sources across various devices.
+- **Meta Weekly Campaign Analysis:** Visualize and compare impressions for campaigns, accounting for duration and partial weeks.
+- **Dockerized Pipeline:** The solution runs in a Docker container, ensuring it can run in any production environment without external dependencies.
+- **Swagger UI Interface:** Easy-to-use Swagger UI for interacting with the pipeline.
 
 ## Setup and Installation
 
-1. **Clone the repository:**
+### 1. Clone the Repository
 
-   ```bash
-   git clone https://github.com/your-username/media-analytics-pipeline.git
-   cd media-analytics-pipeline
-   ```
-
-2. **Build the Docker container:**
-
-   Ensure you have Docker installed on your machine. In the project directory, build the Docker image:
-
-   ```bash
-   docker build -t media-analytics .
-   ```
-
-3. **Run the Docker container:**
-
-   After building the image, you can run the container with the following command:
-
-   ```bash
-   docker run -d \
-     -p 8000:8000 \
-     -v "$(pwd)/data:/app/data" \
-     -v "$(pwd)/output:/app/output" \
-     --name analytics \
-     media-analytics
-   ```
-
-   - This command maps the local `data` directory to `/app/data` and the `output` directory to `/app/output` inside the container.
-   - The container will run the FastAPI application on port 8000.
-
-## Running the Pipeline
-
-Once the container is running, you can trigger the pipeline execution through the FastAPI web service.
-
-### To execute the pipeline:
-
-Use the following `curl` command to trigger the pipeline:
+Clone the repository to your local machine:
 
 ```bash
-curl -X 'POST' \
-  'http://localhost:8000/run-pipeline' \
-  -H 'accept: application/json' \
-  -d ''
+git clone https://github.com/your-username/media-analytics-pipeline.git
+cd media-analytics-pipeline
 ```
 
-### To download a generated report:
+### 2. Build the Docker Image
 
-Once the pipeline execution is complete and the reports are generated, you can download them by specifying the filename:
+Ensure you have Docker installed on your machine. In the project directory, build the Docker image:
 
 ```bash
-curl -X 'GET' \
-  'http://localhost:8000/download-report/{filename}' \
-  -H 'accept: application/json'
+docker build -t media-analytics .
 ```
 
-For example, to download the `Video_Completions_by_Device_Type_and_Platform.html` report:
+### 3. Run the Docker Container
+
+Run the container with the following command:
 
 ```bash
-curl -X 'GET' \
-  'http://localhost:8000/download-report/Video_Completions_by_Device_Type_and_Platform.html' \
-  -H 'accept: application/json'
+docker run -d \
+  -p 8000:8000 \
+  -v "$(pwd)/data:/app/data" \
+  -v "$(pwd)/output:/app/output" \
+  --name analytics \
+  media-analytics
 ```
+
+This command maps the local `data` directory to `/app/data` and the `output` directory to `/app/output` inside the container. The FastAPI application will be available on port 8000.
+
+## Using the API
+
+Once the Docker container is running, you can interact with the pipeline via the Swagger UI.
+
+### 1. Access Swagger UI
+
+Open your browser and go to `http://localhost:8000/docs`. This will display the Swagger UI interface, where you can easily interact with the API.
+
+### 2. Running the Pipeline
+
+In Swagger UI, select the `/run-pipeline` endpoint and click **Try it out**. Then click **Execute** to trigger the pipeline execution.
+
+The pipeline will process the data, generate reports, and store them in the `output` folder.
+
+### 3. Download Generated Reports
+
+Once the pipeline has finished running and the reports are available, you can download them from the API.
+
+In Swagger UI, select the `/download-report/{filename}` endpoint and specify the filename of the report you wish to download. For example:
+
+- `CTR_by_Platform.html`
+- `Video_Completions_by_Device_Type_and_Platform.html`
+- `total_impressions_by_week.html`
+
+Click **Try it out** and then **Execute** to download the report.
 
 ### Available Reports
 
@@ -115,4 +107,3 @@ The following reports are generated by the pipeline:
 
   ```bash
   docker logs -f analytics
-  ```
