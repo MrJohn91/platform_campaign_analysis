@@ -1,10 +1,20 @@
-narwhals==1.36.0
-numpy==2.2.5
-packaging==25.0
+# Core dependencies
+fastapi==0.111.0
+uvicorn==0.29.0
+python-multipart==0.0.9
+
+# Analytics pipeline
 pandas==2.2.3
 plotly==6.0.1
+numpy==1.26.4
 pyarrow==19.0.1
+
+# Supporting libraries
 python-dateutil==2.9.0.post0
 pytz==2025.2
-six==1.17.0
 tzdata==2025.2
+packaging==25.0
+six==1.17.0
+
+# custom package
+narwhals==1.36.0
