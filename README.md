@@ -12,7 +12,7 @@ This project analyzes a year of social media campaign data from four sources to 
 - **Meta Weekly Campaign Analysis:** Visualize and compare impressions for campaigns, accounting for duration and partial weeks.
 - **Dockerized Pipeline:** The solution runs in a Docker container, ensuring it can run in any production environment without external dependencies.
 - **Fast-Api** Provides a web interface to interact with the pipeline and manage the reports
-- **Local-Output-stpraged** Is created and generated reports are saved locally on the user's machine as well as inside the Docker container's output directory.
+- **Local-Output-storage** Is created and generated reports are saved locally on the user's machine as well as inside the Docker container's output directory.
 
 
 ## Setup and Installation
