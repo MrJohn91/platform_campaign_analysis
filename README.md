@@ -4,16 +4,16 @@
 
 ## Overview
 
-This project analyzes a year of social media campaign data from four sources across devices. The goal is to visualize trends, compare device performance, and share key insights on Meta’s weekly campaigns and their duration to guide smarter decisions.
-
-This project implements a media analytics pipeline for analyzing campaign performance data from various platforms. The pipeline generates several visual reports, providing insights into metrics such as impressions, clicks, and views across different device types and platforms. The reports are accessible via a FastAPI-based web service and are generated using Docker.
+This project analyzes a year of social media campaign data from four sources to visualize trends, compare device performance, and provide key insights into Meta’s weekly campaigns and their duration. The solution implements a scalable and automated pipeline that processes campaign performance data, generating visual reports on metrics like impressions, clicks, and views. These reports are accessible via a FastAPI-based web service and are generated within a Docker container, ensuring easy deployment and operation in a production environment.
 
 ## Features
 
 - **Campaign Performance Analysis:** Analyze data from four sources across various devices.
 - **Meta Weekly Campaign Analysis:** Visualize and compare impressions for campaigns, accounting for duration and partial weeks.
 - **Dockerized Pipeline:** The solution runs in a Docker container, ensuring it can run in any production environment without external dependencies.
-- **Swagger UI Interface:** Easy-to-use Swagger UI for interacting with the pipeline.
+- **Fast-Api** Provides a web interface to interact with the pipeline and manage the reports
+- *Local-Output-stpraged** Is created and generated reports are saved locally on the user's machine as well as inside the Docker container's output directory.
+
 
 ## Setup and Installation
 
