@@ -5,7 +5,7 @@ from plotly.subplots import make_subplots
 import os
 
 # Create the output directory if it doesn't exist
-output_dir = '../outputs/visualizations'
+output_dir = '../output/visualization'
 os.makedirs(output_dir, exist_ok=True)
 
 # Load platform dataset with error handling
