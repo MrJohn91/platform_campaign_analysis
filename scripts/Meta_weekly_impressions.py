@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 from datetime import datetime, timedelta
 
 # Create the output visualizations directory if it doesn't exist
-output_vis_dir = '../outputs/visualizations'
+output_vis_dir = '../output/visualization'
 os.makedirs(output_vis_dir, exist_ok=True)
 
 # Load the cleaned Meta dataset with error handling
@@ -101,7 +101,7 @@ meta_weekly_impressions = pd.concat([meta_campaigns, weekly_df], axis=1)
 
 # Save the result to a CSV file with error handling
 try:
-    meta_weekly_impressions.to_csv('../outputs/meta_weekly_impressions.csv', index=False)
+    meta_weekly_impressions.to_csv('../output/meta_weekly_impressions.csv', index=False)
 except Exception as e:
     print(f"Error saving meta_weekly_impressions.csv: {e}")
     exit(1)
