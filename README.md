@@ -105,7 +105,7 @@ To automate the pipeline execution without manual triggering:
   Schedule the pipeline to run at intervals like daily or weekly by using APScheduler inside the FastAPI server.
 
 - **Cron Job for Heavy Workloads**  
-  For larger workloads or production-ready setups, it is recommended to schedule the pipeline externally using a cron job or a cloud-based task scheduler. This offloads the scheduling responsibility from the FastAPI server and provides better control and scalability.
+  For larger workloads or production ready setups, it is recommended to schedule the pipeline externally using a cron job or a cloud-based task scheduler. This offloads the scheduling responsibility from the FastAPI server and provides better control and scalability.
 
 
 ## Troubleshooting
