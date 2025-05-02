@@ -19,7 +19,7 @@ This project analyzes a year of social media campaign data from four sources to 
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/platform_campaign_analysis.git
+git clone https://github.com/MrJohn91/platform_campaign_analysis
 cd platform_campaign_analysis
 ````
 
