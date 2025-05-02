@@ -1,7 +1,7 @@
 # Core analytics dependencies
 pandas==2.2.3
 plotly==6.0.1
-numpy==1.26.4
+numpy==2.2.5
 pyarrow==19.0.1
 
 # Supporting libraries
