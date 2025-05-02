@@ -6,10 +6,10 @@ This project analyzes a year of social media campaign data from four sources to 
 
 ## Features
 
-- **Campaign Performance Analysis:** Analyze data from four sources across various devices.
-- **Meta Weekly Campaign Analysis:** Visualize and compare impressions for campaigns, accounting for duration and partial weeks.
-- **Interactive Reports:** Reports are rendered as browser-viewable HTML files using Plotly.
-- **Local Output Storage:** Generated reports are saved in the `output/` folder on your machine.
+* **Campaign Performance Analysis:** Analyze data from four sources across various devices.
+* **Meta Weekly Campaign Analysis:** Visualize and compare impressions for campaigns, accounting for duration and partial weeks.
+* **Interactive Reports:** Reports are rendered as browser-viewable HTML files using Plotly.
+* **Local Output Storage:** Generated reports are saved in the `output/` folder on your machine.
 
 ## Setup and Installation
 
@@ -20,7 +20,15 @@ Clone the repository to your local machine:
 ```bash
 git clone https://github.com/MrJohn91/platform_campaign_analysis
 cd platform_campaign_analysis
-````
+```
+
+> **Note on Large Files**
+> This project includes large `.parquet` data files tracked via [Git LFS](https://git-lfs.com/).
+> If you encounter issues with missing or pointer files after cloning, please ensure Git LFS is installed and run using the link above:
+
+```bash
+git lfs install
+```
 
 ### 2. Install Dependencies
 
