@@ -71,11 +71,3 @@ All reports are saved as interactive Plotly HTML files and can be opened directl
 * `media_analytics_pipeline.py`: The main code for the analytics pipeline.
 * `requirements.txt`: List of Python dependencies.
 
-## Next Steps
-
-To automate the pipeline execution without manual triggering:
-
-* **Schedule with Cron or Task Scheduler**
-  Set up a cron job (Linux/macOS) or Windows Task Scheduler job to run `media_analytics_pipeline.py` at regular intervals (e.g., daily or weekly).
-
-
