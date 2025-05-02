@@ -1,9 +1,4 @@
-# Core dependencies
-fastapi==0.111.0
-uvicorn==0.29.0
-python-multipart==0.0.9
-
-# Analytics pipeline
+# Core analytics dependencies
 pandas==2.2.3
 plotly==6.0.1
 numpy==1.26.4
@@ -15,6 +10,3 @@ pytz==2025.2
 tzdata==2025.2
 packaging==25.0
 six==1.17.0
-
-# custom package
-narwhals==1.36.0
