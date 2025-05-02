@@ -1,7 +1,5 @@
 # Media Analytics Pipeline
 
-![Pipeline Diagram](https://github.com/MrJohn91/platform_campaign_analysis/blob/main/visualization/diagram.png)
-
 ## Overview
 
 This project analyzes a year of social media campaign data from four sources to visualize trends, compare device performance, and provide key insights into Meta’s weekly campaigns and their duration. The solution implements a modular and automated pipeline that processes campaign performance data, generating visual reports on metrics like impressions, clicks, and views. These reports are generated using standalone Python scripts and saved locally for easy access and analysis.
