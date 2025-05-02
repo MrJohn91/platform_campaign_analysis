@@ -8,7 +8,6 @@ This project analyzes a year of social media campaign data from four sources to 
 
 - **Campaign Performance Analysis:** Analyze data from four sources across various devices.
 - **Meta Weekly Campaign Analysis:** Visualize and compare impressions for campaigns, accounting for duration and partial weeks.
-- **Modular Local Pipeline:** No Docker or web framework required—just run locally with Python.
 - **Interactive Reports:** Reports are rendered as browser-viewable HTML files using Plotly.
 - **Local Output Storage:** Generated reports are saved in the `output/` folder on your machine.
 
