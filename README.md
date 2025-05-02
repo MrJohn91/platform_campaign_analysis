@@ -22,14 +22,7 @@ git clone https://github.com/MrJohn91/platform_campaign_analysis
 cd platform_campaign_analysis
 ````
 
-### 2. (Optional) Create a Virtual Environment
-
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-### 3. Install Dependencies
+### 2. Install Dependencies
 
 Install the required Python libraries:
 
@@ -65,6 +58,6 @@ All reports are saved as interactive Plotly HTML files and can be opened directl
 
 * `data/`: Directory for input data files plus clean processed files for analysis.
 * `output/`: Directory where generated reports will be saved.
-* `media_analytics_pipeline.py`: The main code for the analytics pipeline.
+* `media_analytics_pipeline.py`: Script for the analytics pipeline.
 * `requirements.txt`: List of Python dependencies.
 
